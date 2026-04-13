@@ -235,7 +235,7 @@ export function ContactSection() {
   const members = [
     { name: "Qixin", email: "fanfan@buglive.icu" },
     { name: "Yanan", email: "ee@buglive.icu" },
-    { name: "Bug", email: "" },
+    { name: "Bug", email: "doudou@buglive.icu" },
   ];
 
   return (
