@@ -9,19 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#6C63FF",
-        accent: "#00D4FF",
-        dark: {
-          900: "#0a0a0f",
-          800: "#12121a",
-          700: "#1a1a2e",
-          600: "#222240",
+        monet: {
+          cream: "#F5F0E8",
+          petal: "#E8D5D0",
+          rose: "#C9A2AC",
+          lilac: "#9B8EC2",
+          water: "#6B8FA8",
+          pond: "#4A7A6F",
+          leaf: "#7BA17D",
+          moss: "#A8C6A0",
+          mist: "#D6E4E8",
+          sky: "#B8D0DC",
         },
       },
       animation: {
-        "fade-in": "fadeIn 0.8s ease-out forwards",
-        "fade-in-up": "fadeInUp 0.8s ease-out forwards",
-        glow: "glow 3s ease-in-out infinite alternate",
+        "fade-in": "fadeIn 1s ease-out forwards",
+        "fade-in-up": "fadeInUp 1s ease-out forwards",
+        "float": "float 6s ease-in-out infinite",
+        "shimmer": "shimmer 4s ease-in-out infinite alternate",
       },
       keyframes: {
         fadeIn: {
@@ -32,9 +37,13 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        glow: {
-          "0%": { boxShadow: "0 0 20px rgba(108, 99, 255, 0.3)" },
-          "100%": { boxShadow: "0 0 40px rgba(0, 212, 255, 0.4)" },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        shimmer: {
+          "0%": { opacity: "0.7" },
+          "100%": { opacity: "1" },
         },
       },
     },

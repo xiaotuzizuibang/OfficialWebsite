@@ -8,27 +8,34 @@
   }
 
   body {
-    background-color: #0a0a0f;
-    color: #e0e0e0;
+    background: linear-gradient(180deg, #F5F0E8 0%, #D6E4E8 40%, #B8D0DC 70%, #E8D5D0 100%);
+    background-attachment: fixed;
+    color: #3A4A4F;
+    font-family: "Georgia", "Times New Roman", serif;
   }
 
   ::selection {
-    background-color: rgba(108, 99, 255, 0.4);
-    color: #fff;
+    background-color: rgba(155, 142, 194, 0.35);
+    color: #3A4A4F;
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-6xl mx-auto px-6 py-20 md:py-28;
+    @apply max-w-5xl mx-auto px-6 py-20 md:py-28;
   }
 
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  .monet-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-monet-pond via-monet-water to-monet-lilac;
   }
 
-  .card-glass {
-    @apply bg-dark-700/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 
-           hover:border-primary/30 transition-all duration-500;
+  .card-monet {
+    @apply bg-white/40 backdrop-blur-md border border-monet-petal/40 rounded-3xl p-8
+           hover:bg-white/55 hover:shadow-lg hover:shadow-monet-lilac/10 transition-all duration-700;
+  }
+
+  .divider-monet {
+    @apply w-20 h-0.5 rounded-full;
+    background: linear-gradient(90deg, #9B8EC2, #6B8FA8, #7BA17D);
   }
 }
